@@ -1,7 +1,6 @@
-print "1..1\n"; print "ok 1\n"; exit;
-print "1..3\n";
+BEGIN { print "1..1\n"; print "ok 1\n"; exit }
 
-use Data::Dump qw(dump); 
+use Data::Dump qw(dump);
 
 $a = 42;
 bless \$a, "Foo";

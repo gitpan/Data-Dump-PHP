@@ -3,10 +3,10 @@ abstract: 'Pretty printing of data structures as PHP code'
 author:
   - 'Steven Haryanto <stevenharyanto@gmail.com>'
 build_requires:
-  Module::Build: 0.35
+  Module::Build: 0.3601
 configure_requires:
-  Module::Build: 0.35
-generated_by: 'Dist::Zilla version 1.093400'
+  Module::Build: 0.3601
+generated_by: 'Dist::Zilla version 1.100520'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -14,4 +14,4 @@ meta-spec:
 name: Data-Dump-PHP
 requires:
   Test::More: 0
-version: 0.01
+version: 0.02

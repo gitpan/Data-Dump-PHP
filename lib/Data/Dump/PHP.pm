@@ -8,7 +8,7 @@ require Exporter;
 @EXPORT = qw(dd_php ddx_php);
 @EXPORT_OK = qw(dump_php pp_php quote_php);
 
-$VERSION = 0.01;
+$VERSION = 0.02;
 $DEBUG = 0;
 
 use overload ();
@@ -491,7 +491,7 @@ Data::Dump::PHP - Pretty printing of data structures as PHP code
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -603,6 +603,12 @@ L<Data::Dump> (from which this codebase is based)
 L<PHP::Var> (I tried this first before hacking up Data::Dump::PHP, but
 it has bugs, doesn't do scalars, and doesn't handle recursion.)
 
+L<JSON>, L<YAML> - Another alternative to exchange data with PHP (and
+other languages) is to export/import via YAML and JSON.
+
+L<PHP::Serializer> - Yet another way to exchange data with PHP using
+PHP serialization format.
+
 =head1 ACKNOWLEDGEMENTS
 
 Data::Dump::PHP is a quick hack (as I needed it for
@@ -612,7 +618,7 @@ Ass' wonderful C<Data::Dump> and changed only whatever is necessary.
 =head1 AUTHORS
 
 The C<Data::Dump::PHP> module is written by Steven Haryanto
-<stevenharyanto@aas.no>, based on C<Data::Dump> by Gisle Aas
+<stevenharyanto@gmail.com>, based on C<Data::Dump> by Gisle Aas
 <gisle@aas.no>, based on C<Data::Dumper> by Gurusamy Sarathy
 <gsar@umich.edu>.
 

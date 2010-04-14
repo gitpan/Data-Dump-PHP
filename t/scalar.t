@@ -1,4 +1,4 @@
-print "1..1\n"; print "ok 1\n"; exit;
+BEGIN { print "1..1\n"; print "ok 1\n"; exit }
 
 use Data::Dump qw(dump);
 

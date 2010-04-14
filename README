@@ -2,7 +2,7 @@ NAME
     Data::Dump::PHP - Pretty printing of data structures as PHP code
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
      use Data::Dump::PHP qw(dump_php ddx_php);
@@ -102,6 +102,12 @@ SEE ALSO
     PHP::Var (I tried this first before hacking up Data::Dump::PHP, but it
     has bugs, doesn't do scalars, and doesn't handle recursion.)
 
+    JSON, YAML - Another alternative to exchange data with PHP (and other
+    languages) is to export/import via YAML and JSON.
+
+    PHP::Serializer - Yet another way to exchange data with PHP using PHP
+    serialization format.
+
 ACKNOWLEDGEMENTS
     Data::Dump::PHP is a quick hack (as I needed it for
     Data::Schema::Emitter::PHP). I simply copied the code from Gisle Ass'
@@ -109,7 +115,7 @@ ACKNOWLEDGEMENTS
 
 AUTHORS
     The "Data::Dump::PHP" module is written by Steven Haryanto
-    <stevenharyanto@aas.no>, based on "Data::Dump" by Gisle Aas
+    <stevenharyanto@gmail.com>, based on "Data::Dump" by Gisle Aas
     <gisle@aas.no>, based on "Data::Dumper" by Gurusamy Sarathy
     <gsar@umich.edu>.
 
