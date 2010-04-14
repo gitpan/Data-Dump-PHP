@@ -2,14 +2,14 @@ NAME
     Data::Dump::PHP - Pretty printing of data structures as PHP code
 
 VERSION
-    version 0.02
+    version 0.03
 
 SYNOPSIS
      use Data::Dump::PHP qw(dump_php ddx_php);
 
      # in Perl
-     $str = dump($var);
-     $str2 = dump(@list);
+     $str = dump_php($var);
+     $str2 = dump_php(@list);
 
      # in PHP
      $var = eval("return $str;");
@@ -28,7 +28,7 @@ DESCRIPTION
     is easy to read. Example:
 
         @a = (1, [2, 3], {4 => 5});
-        dump(@a);
+        dump_php(@a);
 
     Produces:
 

@@ -15,7 +15,7 @@ my %module_build_args = (
                        'requires' => {
                                        'Test::More' => '0'
                                      },
-                       'dist_version' => '0.02',
+                       'dist_version' => '0.03',
                        'license' => 'perl'
                      );
 

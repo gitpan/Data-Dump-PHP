@@ -491,15 +491,15 @@ Data::Dump::PHP - Pretty printing of data structures as PHP code
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
  use Data::Dump::PHP qw(dump_php ddx_php);
 
  # in Perl
- $str = dump($var);
- $str2 = dump(@list);
+ $str = dump_php($var);
+ $str2 = dump_php(@list);
 
  # in PHP
  $var = eval("return $str;");
@@ -519,7 +519,7 @@ The main feature of the module is that it strives to produce output
 that is easy to read.  Example:
 
     @a = (1, [2, 3], {4 => 5});
-    dump(@a);
+    dump_php(@a);
 
 Produces:
 

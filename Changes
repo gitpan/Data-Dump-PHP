@@ -1,5 +1,9 @@
 Revision history for Data-Dump-PHP
 
+0.03   2010-04-14
+
+       - Fixed typos in POD.
+
 0.02   2010-04-14
 
        - Fixed typos in POD and Changes.

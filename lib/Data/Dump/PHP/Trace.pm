@@ -1,5 +1,5 @@
 package Data::Dump::PHP::Trace;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 # Todo:
 #   - prototypes
@@ -106,7 +106,7 @@ sub mcall {
 }
 
 package Data::Dump::PHP::Trace::Wrapper;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub AUTOLOAD {
     my $self = shift;
@@ -116,7 +116,7 @@ sub AUTOLOAD {
 }
 
 package Data::Dump::PHP::Trace::Call;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Term::ANSIColor ();
 use Data::Dump::PHP ();
@@ -280,7 +280,7 @@ Data::Dump::PHP::Trace - Helpers to trace function and method calls
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
