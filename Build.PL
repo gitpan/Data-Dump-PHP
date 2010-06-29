@@ -6,17 +6,24 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
                        'dist_abstract' => 'Pretty printing of data structures as PHP code',
+                       'script_files' => [],
+                       'license' => 'perl',
+                       'build_requires' => {
+                                             'Module::Build' => '0.3601'
+                                           },
+                       'dist_name' => 'Data-Dump-PHP',
                        'dist_author' => [
                                           'Steven Haryanto <stevenharyanto@gmail.com>'
                                         ],
-                       'dist_name' => 'Data-Dump-PHP',
-                       'script_files' => [],
                        'module_name' => 'Data::Dump::PHP',
                        'requires' => {
-                                       'Test::More' => '0'
+                                       'perl' => '5.010000'
                                      },
-                       'dist_version' => '0.03',
-                       'license' => 'perl'
+                       'recommends' => {},
+                       'configure_requires' => {
+                                                 'Module::Build' => '0.3601'
+                                               },
+                       'dist_version' => '0.04'
                      );
 
 

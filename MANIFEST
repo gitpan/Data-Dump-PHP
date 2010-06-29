@@ -6,6 +6,7 @@ README
 dist.ini
 lib/Data/Dump/PHP.pm
 lib/Data/Dump/PHP/Trace.pm
+t/00-compile.t
 t/dd.t
 t/dump.t
 t/eval.t
@@ -15,6 +16,8 @@ t/quote.t
 t/ref-php.t
 t/ref.t
 t/regexp.t
+t/release-pod-coverage.t
+t/release-pod-syntax.t
 t/scalar-obj.t
 t/scalar.t
 t/tied.t

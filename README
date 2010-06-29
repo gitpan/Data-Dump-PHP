@@ -2,7 +2,7 @@ NAME
     Data::Dump::PHP - Pretty printing of data structures as PHP code
 
 VERSION
-    version 0.03
+    version 0.04
 
 SYNOPSIS
      use Data::Dump::PHP qw(dump_php ddx_php);
@@ -87,10 +87,15 @@ DESCRIPTION
         line number where it was called. This is meant to be useful for
         debug printouts of state within programs.
 
+OPTIONS
+    $Data::Dump::PHP::USE_LAMBDA (default 0) can be set to 1 to generate PHP
+    code that uses lambda functions instead of create_function(), which is
+    nicer and faster but requires PHP 5.3 or later.
+
 LIMITATIONS
     Code references will be displayed as simply "create_function('', '')"
-    when dumped. Thus, "eval"ing them will not reproduce the original
-    routine.
+    (or "function(){}}") when dumped. Thus, "eval"ing them will not
+    reproduce the original routine.
 
     Regex objects in Perl will become string in PHP. If you want to use this
     string in PHP's PCRE functions, you need to make sure that the regex

@@ -3,6 +3,12 @@ use strict;
 use vars qw(@EXPORT @EXPORT_OK $VERSION $DEBUG);
 use subs qq(dump);
 
+# to make Test::Pod::Coverage happy
+
+=for Pod::Coverage .*
+
+=cut
+
 require Exporter;
 *import = \&Exporter::import;
 @EXPORT = qw(dd_php ddx_php);
@@ -12,8 +18,9 @@ $VERSION = 0.02;
 $DEBUG = 0;
 
 use overload ();
-use vars qw(%seen %refcnt @dump @fixup %require $TRY_BASE64);
+use vars qw(%seen %refcnt @dump @fixup %require $TRY_BASE64 $USE_LAMBDA);
 
+$USE_LAMBDA = 0;
 $TRY_BASE64 = 50 unless defined $TRY_BASE64;
 
 my %is_perl_keyword = map { $_ => 1 }
@@ -93,7 +100,11 @@ sub dump
     if (%refcnt || %require) {
         $out .= ";\n";
 	$out =~ s/^/  /gm;  # indent
-	$out = "call_user_func(create_function('', ".quote($out)."))";
+	if ($USE_LAMBDA) {
+            $out = "call_user_func(function() { ".$out." })";
+        } else {
+            $out = "call_user_func(create_function('', ".quote($out)."))";
+        }
     }
 
     #use Data::Dumper;   print Dumper(\%refcnt);
@@ -330,7 +341,11 @@ sub _dump
 	$out .= ")";
     }
     elsif ($type eq "CODE") {
-	$out = "create_function('', '')";
+	if ($USE_LAMBDA) {
+            $out = "function() {}";
+        } else {
+            $out = "create_function('', '')";
+        }
     }
     else {
 	warn "Can't handle $type data";
@@ -491,7 +506,7 @@ Data::Dump::PHP - Pretty printing of data structures as PHP code
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -586,11 +601,18 @@ printouts of state within programs.
 =back
 
 
+=head1 OPTIONS
+
+$Data::Dump::PHP::USE_LAMBDA (default 0) can be set to 1 to generate
+PHP code that uses lambda functions instead of create_function(),
+which is nicer and faster but requires PHP 5.3 or later.
+
+
 =head1 LIMITATIONS
 
 Code references will be displayed as simply "create_function('', '')"
-when dumped. Thus, C<eval>ing them will not reproduce the original
-routine.
+(or "function(){}}") when dumped. Thus, C<eval>ing them will not
+reproduce the original routine.
 
 Regex objects in Perl will become string in PHP. If you want to use
 this string in PHP's PCRE functions, you need to make sure that the
