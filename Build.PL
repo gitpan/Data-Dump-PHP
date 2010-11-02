@@ -4,27 +4,29 @@ use warnings;
 
 use Module::Build 0.3601;
 
+
 my %module_build_args = (
-                       'dist_abstract' => 'Pretty printing of data structures as PHP code',
-                       'script_files' => [],
-                       'license' => 'perl',
-                       'build_requires' => {
-                                             'Module::Build' => '0.3601'
-                                           },
-                       'dist_name' => 'Data-Dump-PHP',
-                       'dist_author' => [
-                                          'Steven Haryanto <stevenharyanto@gmail.com>'
-                                        ],
-                       'module_name' => 'Data::Dump::PHP',
-                       'requires' => {
-                                       'perl' => '5.010000'
-                                     },
-                       'recommends' => {},
-                       'configure_requires' => {
-                                                 'Module::Build' => '0.3601'
-                                               },
-                       'dist_version' => '0.04'
-                     );
+  'build_requires' => {
+    'Module::Build' => '0.3601'
+  },
+  'configure_requires' => {
+    'Module::Build' => '0.3601'
+  },
+  'dist_abstract' => 'Pretty printing of data structures as PHP code',
+  'dist_author' => [
+    'Steven Haryanto <stevenharyanto@gmail.com>'
+  ],
+  'dist_name' => 'Data-Dump-PHP',
+  'dist_version' => '0.05',
+  'license' => 'perl',
+  'module_name' => 'Data::Dump::PHP',
+  'recommends' => {},
+  'recursive_test_files' => 1,
+  'requires' => {
+    'perl' => '5.010000'
+  },
+  'script_files' => []
+);
 
 
 my $build = Module::Build->new(%module_build_args);

@@ -174,7 +174,7 @@ sub _dump
 		my $v = "$rval";
 
 		my $mod = "";
-		if ($v =~ /^\(\?([msix-]+):([\x00-\xFF]*)\)\z/) {
+		if ($v =~ /^\(\?\^?([msix-]*):([\x00-\xFF]*)\)\z/) {
 		    $mod = $1;
 		    $v = $2;
 		    $mod =~ s/-.*//;
@@ -503,10 +503,6 @@ __END__
 =head1 NAME
 
 Data::Dump::PHP - Pretty printing of data structures as PHP code
-
-=head1 VERSION
-
-version 0.04
 
 =head1 SYNOPSIS
 

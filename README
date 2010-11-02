@@ -1,9 +1,6 @@
 NAME
     Data::Dump::PHP - Pretty printing of data structures as PHP code
 
-VERSION
-    version 0.04
-
 SYNOPSIS
      use Data::Dump::PHP qw(dump_php ddx_php);
 
