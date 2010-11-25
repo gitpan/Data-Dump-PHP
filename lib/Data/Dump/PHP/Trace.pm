@@ -1,6 +1,6 @@
 package Data::Dump::PHP::Trace;
 BEGIN {
-  $Data::Dump::PHP::Trace::VERSION = '0.05';
+  $Data::Dump::PHP::Trace::VERSION = '0.06';
 }
 
 # Todo:
@@ -109,7 +109,7 @@ sub mcall {
 
 package Data::Dump::PHP::Trace::Wrapper;
 BEGIN {
-  $Data::Dump::PHP::Trace::Wrapper::VERSION = '0.05';
+  $Data::Dump::PHP::Trace::Wrapper::VERSION = '0.06';
 }
 
 sub AUTOLOAD {
@@ -121,7 +121,7 @@ sub AUTOLOAD {
 
 package Data::Dump::PHP::Trace::Call;
 BEGIN {
-  $Data::Dump::PHP::Trace::Call::VERSION = '0.05';
+  $Data::Dump::PHP::Trace::Call::VERSION = '0.06';
 }
 
 use Term::ANSIColor ();
