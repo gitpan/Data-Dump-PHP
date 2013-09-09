@@ -1,5 +1,8 @@
 NAME
-    Data::Dump::PHP - Pretty printing of data structures as PHP code
+    Data::Dump::PHP
+
+VERSION
+    version 0.08
 
 SYNOPSIS
      use Data::Dump::PHP qw(dump_php ddx_php);
@@ -84,6 +87,9 @@ DESCRIPTION
         line number where it was called. This is meant to be useful for
         debug printouts of state within programs.
 
+NAME
+    Data::Dump::PHP - Pretty printing of data structures as PHP code
+
 OPTIONS
     $Data::Dump::PHP::USE_LAMBDA (default 0) can be set to 1 to generate PHP
     code that uses lambda functions instead of create_function(), which is
@@ -127,4 +133,13 @@ AUTHORS
 
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 

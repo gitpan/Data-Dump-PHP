@@ -1,16 +1,10 @@
 package Data::Dump::PHP;
-BEGIN {
-  $Data::Dump::PHP::VERSION = '0.07';
-}
 use strict;
 use vars qw(@EXPORT @EXPORT_OK $DEBUG);
 use subs qq(dump);
 
 # to make Test::Pod::Coverage happy
 
-=for Pod::Coverage .*
-
-=cut
 
 require Exporter;
 *import = \&Exporter::import;
@@ -500,9 +494,15 @@ sub quote {
 
 __END__
 
+=pod
+
 =head1 NAME
 
-Data::Dump::PHP - Pretty printing of data structures as PHP code
+Data::Dump::PHP
+
+=head1 VERSION
+
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -596,13 +596,17 @@ printouts of state within programs.
 
 =back
 
+=for Pod::Coverage .*
+
+=head1 NAME
+
+Data::Dump::PHP - Pretty printing of data structures as PHP code
 
 =head1 OPTIONS
 
 $Data::Dump::PHP::USE_LAMBDA (default 0) can be set to 1 to generate
 PHP code that uses lambda functions instead of create_function(),
 which is nicer and faster but requires PHP 5.3 or later.
-
 
 =head1 LIMITATIONS
 
@@ -646,5 +650,16 @@ The C<Data::Dump::PHP> module is written by Steven Haryanto
 
 This library is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
+
+=head1 AUTHOR
+
+Steven Haryanto <stevenharyanto@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Steven Haryanto.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

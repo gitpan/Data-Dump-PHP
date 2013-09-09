@@ -1,9 +1,10 @@
-Build.PL
 Changes
 LICENSE
 MANIFEST
 MANIFEST.SKIP
+META.json
 META.yml
+Makefile.PL
 README
 dist.ini
 lib/Data/Dump/PHP.pm
@@ -20,6 +21,7 @@ t/ref.t
 t/regexp.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
+t/release-rinci.t
 t/scalar-obj.t
 t/scalar.t
 t/tied.t
