@@ -3,8 +3,7 @@ use strict;
 use vars qw(@EXPORT @EXPORT_OK $DEBUG);
 use subs qq(dump);
 
-# to make Test::Pod::Coverage happy
-
+our $VERSION = '0.09'; # VERSION
 
 require Exporter;
 *import = \&Exporter::import;
@@ -491,18 +490,21 @@ sub quote {
 *quote_php = \&quote;
 
 1;
+# ABSTRACT: Pretty printing of data structures as PHP code
 
 __END__
 
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
-Data::Dump::PHP
+Data::Dump::PHP - Pretty printing of data structures as PHP code
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -596,11 +598,10 @@ printouts of state within programs.
 
 =back
 
-=for Pod::Coverage .*
+=head1 FUNCTIONS
 
-=head1 NAME
 
-Data::Dump::PHP - Pretty printing of data structures as PHP code
+None are exported by default, but they are exportable.
 
 =head1 OPTIONS
 
@@ -637,19 +638,22 @@ Data::Dump::PHP is a quick hack (as I needed it for
 L<Data::Schema::Emitter::PHP>). I simply copied the code from Gisle
 Ass' wonderful C<Data::Dump> and changed only whatever is necessary.
 
-=head1 AUTHORS
+=head1 HOMEPAGE
 
-The C<Data::Dump::PHP> module is written by Steven Haryanto
-<stevenharyanto@gmail.com>, based on C<Data::Dump> by Gisle Aas
-<gisle@aas.no>, based on C<Data::Dumper> by Gurusamy Sarathy
-<gsar@umich.edu>.
+Please visit the project's homepage at L<https://metacpan.org/release/Data-Dump-PHP>.
 
- Copyright 2010 Steven Haryanto.
- Copyright 1998-2000,2003-2004,2008 Gisle Aas.
- Copyright 1996-1998 Gurusamy Sarathy.
+=head1 SOURCE
 
-This library is free software; you can redistribute it and/or
-modify it under the same terms as Perl itself.
+Source repository is at L<HASH(0x48000e8)>.
+
+=head1 BUGS
+
+Please report any bugs or feature requests on the bugtracker website
+https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Dump-PHP
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
 
 =head1 AUTHOR
 

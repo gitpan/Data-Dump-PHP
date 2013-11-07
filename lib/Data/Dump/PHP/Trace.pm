@@ -10,6 +10,8 @@ package Data::Dump::PHP::Trace;
 #   - show nested calls sensibly
 #   - time calls
 
+our $VERSION = '0.09'; # VERSION
+
 use strict;
 
 use base 'Exporter';
@@ -268,18 +270,21 @@ sub errno {
 }
 
 1;
+# ABSTRACT: Helpers to trace function and method calls
 
 __END__
 
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
-Data::Dump::PHP::Trace
+Data::Dump::PHP::Trace - Helpers to trace function and method calls
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -401,9 +406,10 @@ prefix), and the function returns a blessed object, then the variable
 name will be used as prefix and the returned object automatically
 traced.
 
-=head1 NAME
+=head1 FUNCTIONS
 
-Data::Dump::PHP::Trace - Helpers to trace function and method calls
+
+None are exported by default, but they are exportable.
 
 =head1 SEE ALSO
 
@@ -411,12 +417,22 @@ L<Data::Dump::PHP>
 
 L<Data::Dump::Trace>
 
-=head1 AUTHOR
+=head1 HOMEPAGE
 
-Copyright 2010 Steven Haryanto.
+Please visit the project's homepage at L<https://metacpan.org/release/Data-Dump-PHP>.
 
-This library is free software; you can redistribute it and/or
-modify it under the same terms as Perl itself.
+=head1 SOURCE
+
+Source repository is at L<HASH(0x48000e8)>.
+
+=head1 BUGS
+
+Please report any bugs or feature requests on the bugtracker website
+https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Dump-PHP
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
 
 =head1 AUTHOR
 

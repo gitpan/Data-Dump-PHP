@@ -1,8 +1,8 @@
 NAME
-    Data::Dump::PHP
+    Data::Dump::PHP - Pretty printing of data structures as PHP code
 
 VERSION
-    version 0.08
+    version 0.09
 
 SYNOPSIS
      use Data::Dump::PHP qw(dump_php ddx_php);
@@ -87,8 +87,8 @@ DESCRIPTION
         line number where it was called. This is meant to be useful for
         debug printouts of state within programs.
 
-NAME
-    Data::Dump::PHP - Pretty printing of data structures as PHP code
+FUNCTIONS
+    None are exported by default, but they are exportable.
 
 OPTIONS
     $Data::Dump::PHP::USE_LAMBDA (default 0) can be set to 1 to generate PHP
@@ -121,18 +121,19 @@ ACKNOWLEDGEMENTS
     Data::Schema::Emitter::PHP). I simply copied the code from Gisle Ass'
     wonderful "Data::Dump" and changed only whatever is necessary.
 
-AUTHORS
-    The "Data::Dump::PHP" module is written by Steven Haryanto
-    <stevenharyanto@gmail.com>, based on "Data::Dump" by Gisle Aas
-    <gisle@aas.no>, based on "Data::Dumper" by Gurusamy Sarathy
-    <gsar@umich.edu>.
+HOMEPAGE
+    Please visit the project's homepage at
+    <https://metacpan.org/release/Data-Dump-PHP>.
 
-     Copyright 2010 Steven Haryanto.
-     Copyright 1998-2000,2003-2004,2008 Gisle Aas.
-     Copyright 1996-1998 Gurusamy Sarathy.
+SOURCE
+    Source repository is at HASH(0x48000e8).
 
-    This library is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself.
+BUGS
+    Please report any bugs or feature requests on the bugtracker website
+    https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Dump-PHP
+
+    When submitting a bug or request, please include a test-file or a patch
+    to an existing test-file that illustrates the bug or desired feature.
 
 AUTHOR
     Steven Haryanto <stevenharyanto@gmail.com>

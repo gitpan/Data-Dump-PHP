@@ -21,9 +21,13 @@ my %WriteMakefileArgs = (
   "NAME" => "Data::Dump::PHP",
   "PREREQ_PM" => {},
   "TEST_REQUIRES" => {
-    "Data::Dump" => 0
+    "Data::Dump" => 0,
+    "File::Spec" => 0,
+    "IO::Handle" => 0,
+    "IPC::Open3" => 0,
+    "Test::More" => 0
   },
-  "VERSION" => "0.08",
+  "VERSION" => "0.09",
   "test" => {
     "TESTS" => "t/*.t"
   }
