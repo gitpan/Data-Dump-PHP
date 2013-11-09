@@ -2,7 +2,7 @@ NAME
     Data::Dump::PHP - Pretty printing of data structures as PHP code
 
 VERSION
-    version 0.09
+    version 0.10
 
 SYNOPSIS
      use Data::Dump::PHP qw(dump_php ddx_php);
@@ -126,11 +126,12 @@ HOMEPAGE
     <https://metacpan.org/release/Data-Dump-PHP>.
 
 SOURCE
-    Source repository is at HASH(0x48000e8).
+    Source repository is at
+    <https://github.com/sharyanto/perl-Data-Dump-PHP>.
 
 BUGS
     Please report any bugs or feature requests on the bugtracker website
-    https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Dump-PHP
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Dump-PHP>
 
     When submitting a bug or request, please include a test-file or a patch
     to an existing test-file that illustrates the bug or desired feature.

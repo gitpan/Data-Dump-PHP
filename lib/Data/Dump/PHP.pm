@@ -3,7 +3,7 @@ use strict;
 use vars qw(@EXPORT @EXPORT_OK $DEBUG);
 use subs qq(dump);
 
-our $VERSION = '0.09'; # VERSION
+our $VERSION = '0.10'; # VERSION
 
 require Exporter;
 *import = \&Exporter::import;
@@ -464,16 +464,16 @@ sub str {
 my %esc = (
     "\t" => "\\t",
     "\n" => "\\n",
-    "\f" => "\\f",
+    "\f" => "\\014", # \f only since 5.2.5
     "\r" => "\\r",
-    "\x0b" => "\\v",
+    "\x0b" => "\\013", # \v only since 5.2.5
 );
 
 # put a string value in double quotes
 sub quote {
   local($_) = $_[0];
   # If there are many '"' we might want to use qq() instead
-  s/([\\\"\@\$])/\\$1/g;
+  s/([\\\"\$])/\\$1/g;
   return qq("$_") unless /[^\040-\176]/;  # fast exit
 
   s/([\t\n\f\r\x0b])/$esc{$1}/g;
@@ -504,7 +504,7 @@ Data::Dump::PHP - Pretty printing of data structures as PHP code
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 SYNOPSIS
 
@@ -644,12 +644,12 @@ Please visit the project's homepage at L<https://metacpan.org/release/Data-Dump-
 
 =head1 SOURCE
 
-Source repository is at L<HASH(0x48000e8)>.
+Source repository is at L<https://github.com/sharyanto/perl-Data-Dump-PHP>.
 
 =head1 BUGS
 
 Please report any bugs or feature requests on the bugtracker website
-https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Dump-PHP
+L<https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Dump-PHP>
 
 When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired

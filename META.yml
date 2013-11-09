@@ -23,4 +23,4 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Dump-PHP
   homepage: https://metacpan.org/release/Data-Dump-PHP
   repository: git://github.com/sharyanto/perl-Data-Dump-PHP.git
-version: 0.09
+version: 0.10
